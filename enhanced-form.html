@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Dream Vacation!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e8f0f7;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #0275d8;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #0275d8;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: #f9f9f9;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background: #0275d8;
+      color: white;
+    }
+
+    th, td {
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    fieldset {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border: 2px solid #0275d8;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #0275d8;
+      padding: 0 0.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    button {
+      background-color: #0275d8;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #025aa5;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #f0f8ff;
+      border-left: 5px solid #0275d8;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Plan Your Dream Vacation!</h1>
+    <p>Welcome! Explore a simple itinerary and submit your own dream travel plan.</p>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beautiful tropical beach">
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Things to Pack</h2>
+      <ul>
+        <li>Clothing
+          <ul>
+            <li>Comfortable Shoes</li>
+            <li>Weather-Appropriate Clothes</li>
+          </ul>
+        </li>
+        <li>Electronics
+          <ul>
+            <li>Phone and Charger</li>
+            <li>Power Bank</li>
+            <li>Digital or Polaroid Camera</li>
+            <li>Headset or Earpods</li>
+          </ul>
+        </li>
+        <li>Travel Documents
+          <ul>
+            <li>International Passport</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sample 3-Day Itinerary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Afternoon</th>
+            <th>Evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td>Arrival and Check-in</td>
+            <td>City Walking Tour</td>
+            <td>Dinner Cruise</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>Museum Visit</td>
+            <td>Shopping</td>
+            <td>Theatre</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>Local Market</td>
+            <td>Lunch and Departure</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <blockquote>
+        "Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you." — Anthony Bourdain
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Plan Your Own Vacation</h2>
+      <form action="submit.html" method="POST">
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required minlength="2">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Travel Details</legend>
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" name="destination" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed.">
+
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date" required>
+
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end-date" required>
+
+          <label for="travelers">Number of Travelers:</label>
+          <input type="number" id="travelers" name="travelers" required max="10">
+
+          <p><strong>Accommodation Type:</strong></p>
+          <label><input type="radio" name="accommodation" value="Hotel" required> Hotel</label>
+          <label><input type="radio" name="accommodation" value="Airbnb"> Hostel</label>
+          <label><input type="radio" name="accommodation" value="Hostel"> Airbnb</label>
+          <label><input type="radio" name="accommodation" value="Other"> Other</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+
+          <label for="specialrequests">Special Requests</label>
+          <textarea id="specialrequests" name="specialrequests" rows="4" placeholder="Let us know of any special needs or preferences." minlength="10"></textarea>
+
+          <label for="totalcost">Estimated Total Cost (USD)</label>
+          <input type="number" id="totalcost" name="totalcost" value="1200" readonly aria-readonly="true" />
+        </fieldset>
+
+        <button type="submit">Submit Plan</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dream Travel Planner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
